@@ -84,9 +84,9 @@ int main(int argc, char * argv[]) {
     *  argv[4]:krb keytab file
     *  argv[5]:pg_krb_srvnam
     */
-    if (argc < 3 || argc > 5 || (argc == 4 && 0 != strcasecmp(argv[3],"off") && 0 != strcasecmp(argv[3],"false"))) {
+    if (argc < 3 || argc > 6 || (argc == 4 && 0 != strcasecmp(argv[3],"off") && 0 != strcasecmp(argv[3],"false"))) {
         fprintf(stderr, "ERROR: gpcheckhdfs parameter error, Please check your config file\n"
-            "\tDFS_NAME and DFS_URL are required, KERBEROS_KEYFILE and ENABLE_SECURE_FILESYSTEM are optional\n");
+            "\tDFS_NAME and DFS_URL are required, KERBEROS_KEYFILE, KERBEROS_SRVNAM and ENABLE_SECURE_FILESYSTEM are optional\n");
         return GPCHKHDFS_ERR;
     } 
 
